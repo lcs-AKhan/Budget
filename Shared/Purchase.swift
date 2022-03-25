@@ -10,6 +10,6 @@ import Foundation
 struct Purchase: Identifiable {
     let id = UUID()
     var description: String
-    var price: Double
+    var cost: Double
     var category: String
 }

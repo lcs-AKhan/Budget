@@ -9,13 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var purchases: [Purchase] = []
     
+    @State private var purchaseCost = ""
+    @State private var description = ""
+    @State private var categories = ["Grocery", "Luxury", "Charity", "Other"]
+    
+    @State private var totalSpent: Double = 0
     
     var body: some View {
         
-        Form {
-            Section {
-                Text("Hello World")
+        NavigationView {
+            Form {
+                Section(header: Text("Purchase Information")) {
+                    Text("")
+                }
             }
         }
         
