@@ -8,8 +8,10 @@
 import Foundation
 
 struct Purchase: Identifiable {
+    
     let id = UUID()
     var description: String
     var cost: Double
     var category: String
+    
 }

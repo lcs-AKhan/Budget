@@ -84,6 +84,10 @@ struct ContentView: View {
                     }
                 }
                 
+                Section {
+                    NavigationLink("All Purchases", destination: PurchasesView(purchases: purchases))
+                }
+                
             }.navigationBarTitle("Budget", displayMode: .inline)
             
         }

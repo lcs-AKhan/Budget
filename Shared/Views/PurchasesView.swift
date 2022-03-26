@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct PurchasesView: View {
+    
+    var purchases: [Purchase]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        Text("List goes here")
+        
     }
 }
 
-struct PurchasesView_Previews: PreviewProvider {
-    static var previews: some View {
-        PurchasesView()
-    }
-}
+//struct PurchasesView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PurchasesView()
+//    }
+//}
