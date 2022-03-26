@@ -15,6 +15,8 @@
 		B869CCD127EE130E00DD7B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B869CCBE27EE130E00DD7B22 /* Assets.xcassets */; };
 		B869CCDB27EE16BC00DD7B22 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869CCDA27EE16BC00DD7B22 /* Purchase.swift */; };
 		B869CCDC27EE16BC00DD7B22 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869CCDA27EE16BC00DD7B22 /* Purchase.swift */; };
+		B869CCDE27EF5BD700DD7B22 /* PurchaseVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869CCDD27EF5BD700DD7B22 /* PurchaseVisibility.swift */; };
+		B869CCDF27EF5BD700DD7B22 /* PurchaseVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869CCDD27EF5BD700DD7B22 /* PurchaseVisibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,7 @@
 		B869CCC927EE130E00DD7B22 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B869CCCB27EE130E00DD7B22 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		B869CCDA27EE16BC00DD7B22 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		B869CCDD27EF5BD700DD7B22 /* PurchaseVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVisibility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 				B869CCBC27EE130700DD7B22 /* BudgetApp.swift */,
 				B869CCBD27EE130700DD7B22 /* ContentView.swift */,
 				B869CCDA27EE16BC00DD7B22 /* Purchase.swift */,
+				B869CCDD27EF5BD700DD7B22 /* PurchaseVisibility.swift */,
 				B869CCBE27EE130E00DD7B22 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -182,6 +186,7 @@
 			files = (
 				B869CCCE27EE130E00DD7B22 /* ContentView.swift in Sources */,
 				B869CCCC27EE130E00DD7B22 /* BudgetApp.swift in Sources */,
+				B869CCDE27EF5BD700DD7B22 /* PurchaseVisibility.swift in Sources */,
 				B869CCDB27EE16BC00DD7B22 /* Purchase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +197,7 @@
 			files = (
 				B869CCCF27EE130E00DD7B22 /* ContentView.swift in Sources */,
 				B869CCCD27EE130E00DD7B22 /* BudgetApp.swift in Sources */,
+				B869CCDF27EF5BD700DD7B22 /* PurchaseVisibility.swift in Sources */,
 				B869CCDC27EE16BC00DD7B22 /* Purchase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
