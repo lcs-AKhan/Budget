@@ -17,6 +17,8 @@
 		B869CCDC27EE16BC00DD7B22 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869CCDA27EE16BC00DD7B22 /* Purchase.swift */; };
 		B869CCDE27EF5BD700DD7B22 /* PurchaseVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869CCDD27EF5BD700DD7B22 /* PurchaseVisibility.swift */; };
 		B869CCDF27EF5BD700DD7B22 /* PurchaseVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869CCDD27EF5BD700DD7B22 /* PurchaseVisibility.swift */; };
+		B869CCE127EF5E4500DD7B22 /* PurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869CCE027EF5E4500DD7B22 /* PurchasesView.swift */; };
+		B869CCE227EF5E4500DD7B22 /* PurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869CCE027EF5E4500DD7B22 /* PurchasesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		B869CCCB27EE130E00DD7B22 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		B869CCDA27EE16BC00DD7B22 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		B869CCDD27EF5BD700DD7B22 /* PurchaseVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVisibility.swift; sourceTree = "<group>"; };
+		B869CCE027EF5E4500DD7B22 /* PurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				B869CCBC27EE130700DD7B22 /* BudgetApp.swift */,
-				B869CCBD27EE130700DD7B22 /* ContentView.swift */,
-				B869CCDA27EE16BC00DD7B22 /* Purchase.swift */,
-				B869CCDD27EF5BD700DD7B22 /* PurchaseVisibility.swift */,
+				B869CCE427EF5E5500DD7B22 /* Model */,
+				B869CCE327EF5E4F00DD7B22 /* Views */,
 				B869CCBE27EE130E00DD7B22 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -84,6 +86,24 @@
 				B869CCCB27EE130E00DD7B22 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		B869CCE327EF5E4F00DD7B22 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B869CCBD27EE130700DD7B22 /* ContentView.swift */,
+				B869CCE027EF5E4500DD7B22 /* PurchasesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B869CCE427EF5E5500DD7B22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B869CCDA27EE16BC00DD7B22 /* Purchase.swift */,
+				B869CCDD27EF5BD700DD7B22 /* PurchaseVisibility.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +207,7 @@
 				B869CCCE27EE130E00DD7B22 /* ContentView.swift in Sources */,
 				B869CCCC27EE130E00DD7B22 /* BudgetApp.swift in Sources */,
 				B869CCDE27EF5BD700DD7B22 /* PurchaseVisibility.swift in Sources */,
+				B869CCE127EF5E4500DD7B22 /* PurchasesView.swift in Sources */,
 				B869CCDB27EE16BC00DD7B22 /* Purchase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +219,7 @@
 				B869CCCF27EE130E00DD7B22 /* ContentView.swift in Sources */,
 				B869CCCD27EE130E00DD7B22 /* BudgetApp.swift in Sources */,
 				B869CCDF27EF5BD700DD7B22 /* PurchaseVisibility.swift in Sources */,
+				B869CCE227EF5E4500DD7B22 /* PurchasesView.swift in Sources */,
 				B869CCDC27EE16BC00DD7B22 /* Purchase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -66,9 +66,9 @@ struct ContentView: View {
                 
                 Section(header: Text("Budget Information")) {
                     
-                    Text("Total Spent: \(totalCost)")
+                    Text("Total Spent: $\(totalCost, specifier: "%.2f")")
                     
-                    Text("Current Budget: \(setBudget)")
+                    Text("Current Budget: $\(setBudget, specifier: "%.2f")")
                     
                     TextField("Change Budget", text: $consideredBudget)
                     
