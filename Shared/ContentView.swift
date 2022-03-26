@@ -26,6 +26,10 @@ struct ContentView: View {
     @State private var selectedCategory = 0
     
     let categories = ["Grocery", "Luxury", "Charity", "Other"]
+    
+    @State private var consideredBudget = ""
+    
+    @State private var setBudget: Double = 0
         
     var body: some View {
         
@@ -46,16 +50,42 @@ struct ContentView: View {
                             Text(self.categories[$0])
                             
                         }
+                        
                     } .pickerStyle(SegmentedPickerStyle())
                     
                     Button(action: {
+                        
                         addToPurchases()
-                        print(purchases[0])
+                        
                     }) {
+                        
                         Text("Add Purchase")
+                        
                     }
                 }
+                
+                Section(header: Text("Budget Information")) {
+                    
+                    Text("Total Spent: \(totalCost)")
+                    
+                    Text("Current Budget: \(setBudget)")
+                    
+                    TextField("Change Budget", text: $consideredBudget)
+                    
+                    Button(action: {
+                        
+                        setBudget = Double(consideredBudget) ?? 0
+                        print("Current budget: \(setBudget)")
+                        
+                    }) {
+                        
+                        Text("Set Budget")
+                        
+                    }
+                }
+                
             }.navigationBarTitle("Budget", displayMode: .inline)
+            
         }
     }
     func addToPurchases() {
