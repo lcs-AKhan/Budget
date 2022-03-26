@@ -47,6 +47,13 @@ struct ContentView: View {
                             
                         }
                     } .pickerStyle(SegmentedPickerStyle())
+                    
+                    Button(action: {
+                        addToPurchases()
+                        print(purchases[0])
+                    }) {
+                        Text("Add Purchase")
+                    }
                 }
             }.navigationBarTitle("Budget", displayMode: .inline)
         }
