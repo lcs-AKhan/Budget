@@ -54,21 +54,13 @@
 		B869CCB627EE130600DD7B22 = {
 			isa = PBXGroup;
 			children = (
-				B869CCBB27EE130700DD7B22 /* Shared */,
-				B869CCCA27EE130E00DD7B22 /* macOS */,
-				B869CCC427EE130E00DD7B22 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		B869CCBB27EE130700DD7B22 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
 				B869CCBC27EE130700DD7B22 /* BudgetApp.swift */,
 				B869CCE427EF5E5500DD7B22 /* Model */,
 				B869CCE327EF5E4F00DD7B22 /* Views */,
 				B869CCBE27EE130E00DD7B22 /* Assets.xcassets */,
+				B869CCCA27EE130E00DD7B22 /* macOS */,
+				B869CCC427EE130E00DD7B22 /* Products */,
 			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		B869CCC427EE130E00DD7B22 /* Products */ = {

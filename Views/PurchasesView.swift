@@ -10,10 +10,15 @@ import SwiftUI
 struct PurchasesView: View {
     
     var purchases: [Purchase]
+    @State private var selectedPurchaseVisibility: PurchaseVisibility = .all
     
     var body: some View {
         
-        Text("List goes here")
+        Form {
+                List(purchases) { purchase in
+                    Text("\(purchase.description) - $\(purchase.cost, specifier: "%.2f") - \(purchase.category)")
+                }
+            }
         
     }
 }

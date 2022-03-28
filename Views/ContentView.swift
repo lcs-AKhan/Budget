@@ -41,7 +41,7 @@ struct ContentView: View {
                     
                     TextField("Description", text: $description)
                     
-                    TextField("Cost", text: $purchaseCost)
+                    TextField("Cost ($)", text: $purchaseCost)
                     
                     Picker("Select Category", selection: $selectedCategory) {
                         
@@ -70,7 +70,7 @@ struct ContentView: View {
                     
                     Text("Current Budget: $\(setBudget, specifier: "%.2f")")
                     
-                    TextField("Change Budget", text: $consideredBudget)
+                    TextField("Change Budget ($)", text: $consideredBudget)
                     
                     Button(action: {
                         

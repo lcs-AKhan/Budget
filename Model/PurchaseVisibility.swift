@@ -9,6 +9,7 @@ import Foundation
 
 enum PurchaseVisibility: String {
     
+    case all = "All"
     case grocery = "Grocery"
     case luxury = "Luxury"
     case charity = "Charity"
