@@ -30,7 +30,7 @@ struct PurchasesView: View {
                 }
             }
             Section {
-                List(purchases) { purchase in
+                List(filter(purchases, by: selectedPurchaseVisibility)) { purchase in
                     Text("\(purchase.description) - $\(purchase.cost, specifier: "%.2f") - \(purchase.category)")
                 }
             }
