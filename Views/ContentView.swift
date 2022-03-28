@@ -30,6 +30,8 @@ struct ContentView: View {
     @State private var consideredBudget = ""
     
     @State private var setBudget: Double = 0
+    
+    @State private var budgetExceeded = false
         
     var body: some View {
         
@@ -87,6 +89,10 @@ struct ContentView: View {
                 Section {
                     NavigationLink("All Purchases", destination: PurchasesView(purchases: purchases))
                 }
+                .alert(isPresented: $budgetExceeded) {
+                                Alert(title: Text("Warning"), message: Text("You have exceeded your budget!"), dismissButton: .default(Text("Okay")) {
+                                })
+                            }
                 
             }.navigationBarTitle("Budget", displayMode: .inline)
             
