@@ -90,7 +90,7 @@ struct ContentView: View {
                     NavigationLink("All Purchases", destination: PurchasesView(purchases: purchases))
                 }
                 .alert(isPresented: $budgetExceeded) {
-                                Alert(title: Text("Warning"), message: Text("You have exceeded your budget!"), dismissButton: .default(Text("Okay")) {
+                                Alert(title: Text("Warning"), message: Text("You have exceeded your budget by $\(totalCost - setBudget, specifier: "%.2f")!"), dismissButton: .default(Text("Okay")) {
                                 })
                             }
                 
@@ -107,6 +107,10 @@ struct ContentView: View {
                                   category: categories[selectedCategory])
         
         purchases.insert(newPurchase, at: 0)
+        
+        if totalCost > setBudget {
+            budgetExceeded = true
+        }
         
     }
 }
