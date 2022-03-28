@@ -32,6 +32,8 @@ struct ContentView: View {
     @State private var setBudget: Double = 0
     
     @State private var budgetExceeded = false
+    
+    @State private var deleteAlertShowing = false
         
     var body: some View {
         
@@ -65,6 +67,11 @@ struct ContentView: View {
                         
                     }
                 }
+                .alert(isPresented: $budgetExceeded) {
+                    Alert(title: Text("Warning"), message: Text("You have exceeded your budget by $\(totalCost - setBudget, specifier: "%.2f")!"), dismissButton: .default(Text("Okay")) {
+                    })
+                }
+
                 
                 Section(header: Text("Budget Information")) {
                     
@@ -89,15 +96,35 @@ struct ContentView: View {
                 Section {
                     NavigationLink("All Purchases", destination: PurchasesView(purchases: purchases))
                 }
-                .alert(isPresented: $budgetExceeded) {
-                                Alert(title: Text("Warning"), message: Text("You have exceeded your budget by $\(totalCost - setBudget, specifier: "%.2f")!"), dismissButton: .default(Text("Okay")) {
-                                })
-                            }
                 
+                Section {
+                    Button(action: {
+                        self.deleteAlertShowing = true
+                    }) {
+                        Text("Delete Purchases")
+                            .foregroundColor(.red)
+                    }
+                    
+                }
+                .alert(isPresented: $deleteAlertShowing) {
+                    Alert(title: Text("Delete Purchases?"), message: Text("This will wipe out every purchase you made and the cost."),
+                          primaryButton: .default(Text("Continue")) {
+                        DeletePurchases()
+                    }, secondaryButton: .cancel())
+                }
             }.navigationBarTitle("Budget", displayMode: .inline)
             
         }
     }
+    func DeletePurchases() {
+        
+        purchases = []
+        totalCost = 0
+        budgetExceeded = false
+        deleteAlertShowing = false
+        
+    }
+    
     func addToPurchases() {
         
         totalCost += Double(purchaseCost) ?? 0
