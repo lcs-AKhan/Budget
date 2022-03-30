@@ -16,9 +16,7 @@ struct ContentView: View {
     @State private var description = ""
     
     var currentCategory: String {
-        
         categories[selectedCategory]
-        
     }
     
     @State private var totalCost: Double = 0
@@ -34,7 +32,7 @@ struct ContentView: View {
     @State private var budgetExceeded = false
     
     @State private var deleteAlertShowing = false
-        
+    
     var body: some View {
         
         NavigationView {
@@ -44,13 +42,10 @@ struct ContentView: View {
                 Section(header: Text("Purchase Information")) {
                     
                     TextField("Description", text: $description)
-                    
                     TextField("Cost ($)", text: $purchaseCost)
                     
                     Picker("Select Category", selection: $selectedCategory) {
-                        
                         ForEach(0 ..< categories.count, id: \.self) {
-                            
                             Text(self.categories[$0])
                             
                         }
@@ -58,38 +53,28 @@ struct ContentView: View {
                     } .pickerStyle(SegmentedPickerStyle())
                     
                     Button(action: {
-                        
                         addToPurchases()
-                        
                     }) {
-                        
                         Text("Add Purchase")
-                        
                     }
                 }
                 .alert(isPresented: $budgetExceeded) {
                     Alert(title: Text("Warning"), message: Text("You have exceeded your budget by $\(totalCost - setBudget, specifier: "%.2f")!"), dismissButton: .default(Text("Okay")) {
                     })
                 }
-
                 
                 Section(header: Text("Budget Information")) {
                     
                     Text("Total Spent: $\(totalCost, specifier: "%.2f")")
-                    
                     Text("Current Budget: $\(setBudget, specifier: "%.2f")")
                     
                     TextField("Change Budget ($)", text: $consideredBudget)
                     
                     Button(action: {
-                        
                         setBudget = Double(consideredBudget) ?? 0
                         print("Current budget: \(setBudget)")
-                        
                     }) {
-                        
                         Text("Set Budget")
-                        
                     }
                 }
                 
@@ -130,8 +115,8 @@ struct ContentView: View {
         totalCost += Double(purchaseCost) ?? 0
         
         let newPurchase = Purchase(description: description,
-                                  cost: Double(purchaseCost) ?? 0,
-                                  category: categories[selectedCategory])
+                                   cost: Double(purchaseCost) ?? 0,
+                                   category: categories[selectedCategory])
         
         purchases.insert(newPurchase, at: 0)
         

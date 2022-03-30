@@ -37,28 +37,28 @@ struct PurchasesView: View {
         }
     }
     func filter(_ listOfPurchases: [Purchase], by visibility: PurchaseVisibility) -> [Purchase] {
-                        
-                if visibility == .all {
-                    return listOfPurchases
-                } else {
-                    
-                    var filteredPurchases: [Purchase] = []
-                            
-                    for currentPurchase in listOfPurchases {
-                                
-                    if visibility == .grocery && currentPurchase.category == "Grocery" {
-                        filteredPurchases.insert(currentPurchase, at: 0)
-                    } else if visibility == .luxury && currentPurchase.category == "Luxury" {
-                        filteredPurchases.insert(currentPurchase, at: 0)
-                    } else if visibility == .charity && currentPurchase.category == "Charity" {
-                        filteredPurchases.insert(currentPurchase, at: 0)
-                    } else if visibility == .other && currentPurchase.category == "Other" {
-                        filteredPurchases.insert(currentPurchase, at: 0)
-                    }
-                            
-                    }
-                    return filteredPurchases
+        
+        if visibility == .all {
+            return listOfPurchases
+        } else {
+            
+            var filteredPurchases: [Purchase] = []
+            
+            for currentPurchase in listOfPurchases {
+                
+                if visibility == .grocery && currentPurchase.category == "Grocery" {
+                    filteredPurchases.insert(currentPurchase, at: 0)
+                } else if visibility == .luxury && currentPurchase.category == "Luxury" {
+                    filteredPurchases.insert(currentPurchase, at: 0)
+                } else if visibility == .charity && currentPurchase.category == "Charity" {
+                    filteredPurchases.insert(currentPurchase, at: 0)
+                } else if visibility == .other && currentPurchase.category == "Other" {
+                    filteredPurchases.insert(currentPurchase, at: 0)
                 }
+                
+            }
+            return filteredPurchases
+        }
     }
 }
 
